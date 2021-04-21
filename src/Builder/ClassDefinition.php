@@ -6,17 +6,12 @@ namespace Serializer\Builder;
 
 class ClassDefinition
 {
-    /** @var string */
-    private $name;
+    private string $name;
+    private bool $isValueObject;
+    private bool $isCollection;
 
     /** @var ClassProperty[] */
-    private $properties;
-
-    /** @var bool */
-    private $isValueObject;
-
-    /** @var bool */
-    private $isCollection;
+    private array $properties;
 
     public function __construct(string $name, bool $isCollection, bool $isValueObject, ClassProperty ...$properties)
     {

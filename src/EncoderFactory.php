@@ -13,14 +13,11 @@ use Serializer\Exception\UnableToLoadOrCreateCacheClass;
 
 class EncoderFactory
 {
-    /** @var string */
-    private $cacheDir;
-
-    /** @var bool */
-    private $checkTimestamp;
+    private string $cacheDir;
+    private bool $checkTimestamp;
 
     /** @var array<string, string> */
-    private $customEncoders;
+    private array $customEncoders;
 
     /**
      * @param array<string, string> $customEncoders

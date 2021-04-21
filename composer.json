@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-    "php": ">=7.3",
+    "php": ">=8.0",
     "ext-json": "*"
   },
   "require-dev": {
@@ -28,11 +28,6 @@
   "autoload-dev": {
     "psr-4": {
       "Test\\Serializer\\": "tests/"
-    }
-  },
-  "config": {
-    "platform": {
-      "php": "7.3.27"
     }
   },
   "scripts": {

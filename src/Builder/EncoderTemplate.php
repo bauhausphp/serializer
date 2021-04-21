@@ -34,11 +34,8 @@ class [cacheClassName] extends Encoder
 }
 STIRNG;
 
-    /** @var ClassDefinition */
-    private $definition;
-
-    /** @var string */
-    private $factoryName;
+    private ClassDefinition $definition;
+    private string $factoryName;
 
     public function __construct(ClassDefinition $definition, string $factoryName)
     {

@@ -19,14 +19,9 @@ use Serializer\Exception\ValueObjectMustHaveScalarValue;
 
 class ClassAnalyzer
 {
-    /** @var string */
-    private $className;
-
-    /** @var ReflectionClass */
-    private $class;
-
-    /** @var ReflectionMethod */
-    private $constructor;
+    private string $className;
+    private ReflectionClass $class;
+    private ReflectionMethod $constructor;
 
     /**
      * @throws ClassMustHaveAConstructor
@@ -65,6 +60,7 @@ class ClassAnalyzer
      * @throws PropertyHasNoGetter
      * @throws IterableMustHaveOneParameterOnly
      * @throws ValueObjectMustHaveScalarValue
+     * @throws ReflectionException
      */
     private function createProperty(ReflectionParameter $param, bool $isCollection, bool $isValueObject): ClassProperty
     {

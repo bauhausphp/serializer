@@ -9,8 +9,7 @@ namespace Serializer;
  */
 abstract class Decoder
 {
-    /** @var Serializer */
-    private $serializer;
+    private Serializer $serializer;
 
     /**
      * @param string|mixed|object $data

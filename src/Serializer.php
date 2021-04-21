@@ -13,16 +13,13 @@ use Traversable;
 abstract class Serializer
 {
     /** @var Encoder[] */
-    private $encoders = [];
+    private array $encoders;
 
     /** @var Decoder[] */
-    private $decoders = [];
+    private array $decoders;
 
-    /** @var EncoderFactory */
-    private $encoderFactory;
-
-    /** @var DecoderFactory */
-    private $decoderFactory;
+    private EncoderFactory $encoderFactory;
+    private DecoderFactory $decoderFactory;
 
     /**
      * @template T of object
@@ -41,6 +38,9 @@ abstract class Serializer
 
     public function __construct(EncoderFactory $encoderFactory, DecoderFactory $decoderFactory)
     {
+        $this->encoders = [];
+        $this->decoders = [];
+
         $this->encoderFactory = $encoderFactory;
         $this->decoderFactory = $decoderFactory;
     }

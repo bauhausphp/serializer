@@ -9,8 +9,7 @@ namespace Serializer;
  */
 abstract class Encoder
 {
-    /** @var Serializer */
-    private $serializer;
+    private Serializer $serializer;
 
     /**
      * @return mixed
